@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+   <b>In Execution or global execution context we have two phases i.)Creation phase and ii.)Execution phase</b>
+
+   I.)<b>Creation phase:</b> In creation phase the compiler runs through the entire code , so in the first iteration it pick ups all the function declarations and store them in the memory with their reference ,
+    and in the second iteration it picks up all the variables and assign them undefined.
+
+    II.)<b>Execution phase:</b> In execution phase it assigns the variable with a value and starts executing the functions.
+
+    <br/>
+    <br/>
+  <img src="https://miro.medium.com/max/1220/1*EWLRJFL5gnPfDpdIKj6zLQ.png" alt="notfound"/>
+    <br/>
+    <br/>
+
+     <b>Call Stack, Call back queue,Microtask queue,Event Loop,WebApi,</b>
+     Consider we have a Settimeout function which is a WebApi.Since Settimeout is asynchronous function , 
+     in javascript the asynchronous functions are executed in a different way,they will not interfere with the synchronous tasks.
+     The settimeout function is passed to the call back queue,Call back queue by the name itself will have the callback functions which are yet to be executed,
+     Microtask queue also does the same thing but Microtask queue takes Promises,Microtask queue has more priority than Call back queue.
+     The Event loop acts like a mediator between (callback queue ,microtask queue) and (Call stack).Event loop tasks is to send the call back functions to call stack for execution once call stack gets empty.
+     Call Stack keeps the tracking of functions.And function is removed from the call stack once the function gets returned or when the functions reaches its end of the scope or end point.
+     <br/>
+     <br/>
+     <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Y1v6aJBu--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/ek7ji4zrimozpp2yzk0a.png" height="500px" alt="notfound"/>
+
+ 
+</pre>
+</body>
+</html>
