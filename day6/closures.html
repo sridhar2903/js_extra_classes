@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOSURES,FIRSTCLASS ,CALL BACK AND HIGHER ORDER FUNCTIONS</title>
+</head>
+<body>
+    
+    <pre>
+        // CLOSURES
+
+function outerfunc()
+{
+    var a=10;
+    function innerfunc()
+    {
+        console.log(a);
+    }
+
+    innerfunc();
+}
+
+outerfunc();
+
+
+
+
+//FIRST CLASS FUNCTIONS OR CALL BACK FUNCTIONS ARE SIMILAR 
+//The function which are passed as an argument to another function
+//In case of callback functions ,it is used to handle asynchronous tasks.
+
+
+//HIGHER ORDER FUNCTIONS are those functions which will have other function as parameter.
+
+
+function higherorder(firstclass)
+{
+    firstclass();
+    
+}
+
+
+higherorder(firstclass);
+
+function firstclass()
+{
+console.log("Hello World");
+}
+ 
+
+    </pre>
+  <script src="callback.js"></script>  
+</body>
+</html>
