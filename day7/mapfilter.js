@@ -32,5 +32,5 @@
 // console.log(array);
 
 // const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
-
+// console.log(animals);
 // console.log(animals.slice(animals.length));
