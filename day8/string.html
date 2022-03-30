@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRING AND ARRAY</title>
+</head>
+<body>
+    <pre style="font-weight: bolder;">
+//REVERSING A STRING
+
+let s="sridhar"
+
+
+let a=s.split("");
+let b=a.reverse();
+let c=b.join("");
+console.log(c);
+
+
+//REMOVE THE DUPLICATE ARRAY ELEMENTS
+let arr=[1,2,3,1,1,1,2,2,3,3,3,3];
+
+let aa=new Set(arr);
+let bb= [...aa]
+console.log(bb);
+
+
+//REMOVE THE DUPLICATE STRING CHARACTERS
+let ss="iiiiii"
+let cc=new Set(ss);
+let d=[...cc]
+let e=d.join("");
+console.log(e);
+
+    </pre>
+    <script src="array.js"></script>
+</body>
+</html>
