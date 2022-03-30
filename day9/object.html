@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECTS AND CONSTRUCTOR FUNCTION</title>
+</head>
+<body>
+    <pre style="font-weight: bolder;">
+ //OBJECT DESTRUCTURING
+
+let obj=
+{
+    name:"sridhar",
+    age:21
+}
+
+let {name:username,age:userage}=obj;
+
+console.log(username);
+console.log(userage);
+
+
+
+//CREATING MULTIPLE OBJECTS USING CONSTRUCTOR FUNCTION
+
+
+function employee (empname,empage)
+{
+this.empname=empname;
+this.empage=empage;
+}
+
+
+let empone=new employee("sridhar",21);
+
+let emptwo=new employee("madhav",26);
+
+console.log(empone);
+console.log(emptwo);
+
+
+    </pre>
+<script src="constructor.js"></script>  
+</body>
+</html>
