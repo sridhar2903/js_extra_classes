@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANDSON ARRAY STRING</title>
+</head>
+
+<body>
+    <pre>
+        <h1>1.Q) GIVEN AN ARRAY ADD 10 TO ALL ELEMENTS WITH MAP AND FOR EACH</h1>
+        let arr=[10,20,30,40,50];
+
+      let add=arr.map((x)=>x+10);
+         console.log(add);
+
+
+        arr.forEach((x)=>console.log(x+10))
+     
+ 
+
+        <h1>2.Q) GIVEN AN ARRAY CHECK FOR THE ELEMENTS LESS THAN 60 VALUE AND THEN RETURN THE COUNT AND ALSO RETURN THOSE ARRAY ELEMENTS </h1>
+
+
+        let arrtwo=[10,20,30,40,50,60,70,80,90,100];
+        let count=0;
+        let arrthree=[];
+  
+  
+        for(var i=0;i < arrtwo.length;i++)
+        {
+            if(arrtwo[i] < 60)  
+            {
+                count++
+                arrthree.push(arrtwo[i]);
+            }
+        }
+        
+        console.log(count);
+        console.log(arrthree);
+
+
+        <h1>3.Q) ADD ALL THE ELEMENTS IN ARRAY AND RETURN THAT SUM</h1>
+                           
+let arrsum=[10,20,30];
+
+
+let sum=arrsum.reduce((x,s)=>s=s+x,0);
+
+console.log(sum);
+
+
+<h1>4.Q.) REPLACE "PETER" WITH "JOHN IN THE GIVEN STRING</h1>
+
+
+let s="Peter is a good guy, Peter is from england";
+
+
+let replace=s.replaceAll("Peter","John")
+console.log(replace);
+
+<h1>5Q.) Reverse a string "Hello this is me"  with  "me is this Hello"</h1>
+
+let stringrev=" Hello this is me";
+
+let rev=stringrev.split(" ");
+
+let arev=rev.reverse();
+
+let joinrev=arev.join(" ");
+
+console.log(joinrev);
+                     
+    </pre>
+
+
+    <pre style="font-weight: bolder;"> <h1>6Q.) EXPLAIN CALL,APPLY AND BIND </h1>
+
+    <h3> CALL,APPLY,BIND</h3>   is Applicable to objects, they are used to call the functions.
+    Their purpose is that, whenever we try to access the object properties with "this keyword" inside a function,
+    then its gonna return undefined ,with the help of call,apply and bind i can get the required output.
+    CALL, APPLY,BIND can also be used for passing additional arguments.
+    The difference between CALL ,APPLY AND BIND is that in case of CALL additional arguments passed by separarting them 
+    with comma operator.
+    In case of APPLY , additional arguments passed inside an array.
+    In case of BIND, return a function and while invoking that function 
+    then can pass aditional arguments by separating them with comma operator.
+
+
+    let obj={
+        name:"sridhar",
+        age:21
+    }
+    
+    
+    function printdata(weight,height)
+    {
+        console.log(this.name,this.age,height,weight);
+    }
+    
+    
+    printdata.call(obj,50,160);
+    printdata.apply(obj,[60,160]);
+    
+    let newprintdata=printdata.bind(obj)
+    
+    newprintdata(70,170);
+
+</pre>
+    
+<pre style="font-weight: bolder;"> <h1>7Q.) EXPLAIN PROTOTYPE AND PROTOTYPE CHAINING</h1>
+
+    <h3>PROTOTYPE:</h3>
+      
+    When ever we create a object it is always attached with a  Object prototype which has some hidden properities.
+    Object prototype is like a parent through which objects or arrays or functions inherit the properities from.
+    Thus ,in an array we can some array methods like map,reduce ,filter,which are array properities and these properities
+    are inherited from Parent prototype
+
+
+    let arr=[1,2,3];
+      Object.prototype : PARENT prototype
+
+    arr.__proto__ :returns me array properites
+
+    arr.__proto__.__proto__: returns me Object.prototype Properites (hence we can say that arr array is inheriting the properites from Object.prototype)
+</pre>
+
+
+<pre style="font-weight: bolder;">
+<h1>8.Q)RETRIEVE OBJECT KEYS AND VALUES</h1>
+
+
+let userobj={
+    name:"sridhar",
+    age:21,
+    salary:"5LPA"
+}
+
+console.log(Object.keys(userobj));
+console.log((Object.values(userobj)));
+</pre>
+
+
+
+<pre style="font-weight: bolder;">
+    <h1>9.Q) CREATE THE OBJECT IN 3 WAYS</h1>
+
+    <i style="font-size: 20px;">1ST WAY:
+   WITH CURLY BRACES</i> 
+    let 
+    obj={
+        name:"sridhar",
+        age:21
+    }
+
+
+    <i style="font-size: 20px;">2ND WAY: 
+    
+   CREATING MULTIPLE OBJECTS USING FUNCTION CONSTRUCTOR</i>
+    function createobject(place,country)
+{
+    this.place=place
+    this.country=country
+}
+
+
+let personone= new createobject("hyderabad","INDIA");
+let persontwo=new createobject("new york","USA");
+
+console.log(personone);
+console.log(persontwo);
+
+
+<i style="font-size: 20px;">3RD WAY:
+WITH NEW KEYWORD</i>
+
+const person = new Object();
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue"; 
+
+console.log(person);
+
+
+  
+
+</pre>
+</pre>
+    <script src="arraystring.js"></script>
+</body>
+
+</html>
